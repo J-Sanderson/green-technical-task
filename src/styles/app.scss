@@ -32,7 +32,7 @@ main {
   color: $grey-dark;
   min-width: 33vw;
   padding: 3rem;
-  box-shadow: 0 0 3px $grey-mid;
+  box-shadow: 0 0 3px -1px $grey-mid;
   
   .logo {
     max-width: 7rem;
@@ -45,9 +45,9 @@ main {
   
   h2 {
     color: $grey-mid;
-    font-weight: 200;
     font-size: 1.25rem;
-    margin: 0;
+    font-weight: 300;
+    margin: 0.5rem 0 0 0;
   }
 }
 
@@ -55,7 +55,7 @@ form {
   margin: 2rem 0 0 0;
   > * {
     display: block;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
   }
   button {
     margin-top: 2rem;
@@ -65,6 +65,9 @@ form {
 .text-input {
   display: flex;
   flex-direction: column;
+  span {
+    margin-bottom: 0.5rem;
+  }
   input {
     @include box;
     padding: 0.5rem;
@@ -113,8 +116,8 @@ form {
 .button {
   @include box;
   width: auto;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 100;
-  padding: 1rem 2.5rem;
+  padding: 0.5rem 1.5rem;
   cursor: pointer;
 }
