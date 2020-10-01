@@ -111,6 +111,9 @@ form {
     transform: rotate(45deg);
     content: '';
   }
+  input:focus + .check {
+    border-color: $grey-dark;
+  }
 }
 
 .button {
