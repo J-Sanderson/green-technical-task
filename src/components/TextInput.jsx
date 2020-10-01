@@ -2,7 +2,7 @@ import React, { Component } from "react";
 export class TextInput extends Component {
   render() {
     return (
-      <label for={this.props.name}>
+      <label for={this.props.name} className="text-input">
         <span>{this.props.label}</span>
         <input
           name={this.props.name}

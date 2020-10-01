@@ -8,7 +8,7 @@ export class LoginForm extends Component {
       <form>
         <TextInput label="Email Address" name="email" type="email" required="true" />
         <Checkbox label="Remember this device" />
-        <Button text="Sign in" />
+        <Button text="Sign in" type="submit" />
       </form>
     );
   }

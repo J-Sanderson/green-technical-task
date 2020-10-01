@@ -2,6 +2,7 @@ $grey-light: #fafafa;
 $grey-mid: #a8a7a8;
 $grey-dark: #4a4749;
 $white: #ffffff;
+$blue: #37a9e0;
 
 @import url('https://fonts.cdnfonts.com/css/gotham');
 
@@ -21,7 +22,8 @@ body {
 
 main {
   background: $white;
-  width: 33vw;
+  color: $grey-dark;
+  min-width: 33vw;
   padding: 3rem;
   box-shadow: 0 0 3px $grey-mid;
   
@@ -30,15 +32,68 @@ main {
   }
   
   h1 {
-    color: $grey-dark;
+    font-weight: 500;
+    margin: 2rem 0 0 0;
   }
   
   h2 {
     color: $grey-mid;
+    font-weight: 200;
+    font-size: 1.25rem;
+    margin: 0;
   }
 }
 
 form {
+  margin: 2rem 0 0 0;
+  > * {
+    display: block;
+    margin: 0.25rem 0;
+  }
+  button {
+    margin-top: 2rem;
+  }
+}
+
+.text-input {
   display: flex;
   flex-direction: column;
+  input {
+    border: 1px solid $grey-mid;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+  }
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .check {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid $grey-mid;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+  }
+  input {
+    max-width: 0px;
+    max-height: 0px;
+    opacity: 0;
+  }
+  input:checked + span{
+    border-color: $blue;
+    background: $blue;
+  }
+}
+
+.button {
+  width: auto;
+  font-size: 1.25rem;
+  background: $white;
+  border: 1px solid $grey-mid;
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
 }
