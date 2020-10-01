@@ -37,3 +37,8 @@ main {
     color: $grey-mid;
   }
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
