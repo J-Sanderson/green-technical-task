@@ -1,5 +1,126 @@
-$background: #fafafa;
+$grey-lightest: #fafafa;
+$grey-light: #e9e9e9;
+$grey-mid: #a8a7a8;
+$grey-dark: #4a4749;
+$white: #ffffff;
+$blue: #37a9e0;
+
+@import url('https://fonts.cdnfonts.com/css/gotham');
+
+@mixin box {
+  background: $white;
+  border: 1px solid $grey-light;
+  border-radius: 0.25rem;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
 body {
-  background: $background;
+  background: $grey-lightest;
+  font-family: 'Gotham', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background: $white;
+  color: $grey-dark;
+  min-width: 33vw;
+  padding: 3rem;
+  box-shadow: 0 0 3px -1px $grey-mid;
+  
+  .logo {
+    max-width: 7rem;
+  }
+  
+  h1 {
+    font-weight: 500;
+    margin: 2rem 0 0 0;
+  }
+  
+  h2 {
+    color: $grey-mid;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin: 0.5rem 0 0 0;
+  }
+}
+
+form {
+  margin: 2rem 0 0 0;
+  > * {
+    display: block;
+    margin: 1rem 0;
+  }
+  button {
+    margin-top: 2rem;
+  }
+}
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  span {
+    margin-bottom: 0.5rem;
+  }
+  input {
+    @include box;
+    padding: 0.5rem;
+  }
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .check {
+    @include box;
+    position: relative;
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+  }
+  input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+  input:checked + .check {
+    border-color: $blue;
+    background: $blue;
+  }
+  input:checked + .check:after {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.4rem;
+    border: 2px solid $white;
+    border-top-width: 0;
+    border-left-width: 0;
+    width: 0.3rem;
+    height: 0.7rem;
+    transform: rotate(45deg);
+    content: '';
+  }
+  input:focus + .check {
+    border-color: $grey-dark;
+  }
+}
+
+.button {
+  @include box;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
 }
