@@ -1,8 +1,39 @@
-$background: #fafafa;
+$grey-light: #fafafa;
+$grey-mid: #a8a7a8;
+$grey-dark: #4a4749;
+$white: #ffffff;
 
 @import url('https://fonts.cdnfonts.com/css/gotham');
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  background: $background;
+  background: $grey-light;
   font-family: 'Gotham', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background: $white;
+  width: 33vw;
+  padding: 3rem;
+  box-shadow: 0 0 3px $grey-mid;
+  
+  .logo {
+    max-width: 7rem;
+  }
+  
+  h1 {
+    color: $grey-dark;
+  }
+  
+  h2 {
+    color: $grey-mid;
+  }
 }
