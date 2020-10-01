@@ -1,1 +1,1 @@
-# green-technical-task
+`npm run build`
